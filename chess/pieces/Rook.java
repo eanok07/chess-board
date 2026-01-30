@@ -9,7 +9,7 @@ public class Rook extends Piece {
     }
 
     @Override
-    public boolean move(int sr, int sc, int er, int ec) {
+    public boolean move(int startrow, int startcol, int endrow, int endcol) {
         return true;
     }
 }

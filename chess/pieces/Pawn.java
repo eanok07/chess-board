@@ -8,7 +8,7 @@ public class Pawn extends Piece {
     }
 
     @Override
-    public boolean move(int starr, int sc, int er, int ec) {
+    public boolean move(int startrow, int startcol, int endrow, int endcol) {
 
         return true;
     }
