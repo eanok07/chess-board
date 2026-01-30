@@ -5,11 +5,11 @@ import chess.*;
 public class Rook extends Piece {
 
     public Rook(Color color) {
-        super(color, BoardPiece.rook);
+        super(color);
     }
 
     @Override
-    public boolean move(int startrow, int startcol, int endrow, int endcol) {
+    public boolean move(Square targetSquare) {
         return true;
     }
 }

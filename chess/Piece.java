@@ -1,30 +1,26 @@
 package chess;
 
 public abstract class Piece {
-    public  Color color;
-    public BoardPiece piece;
-    
-    public enum Color  {
-    white,
-    black
-}
-public enum BoardPiece {
-    pawn, rook, knight, bishop, queen, king
-}
+    public final Color color;
+    public final String name = this.getClass().getSimpleName();
+    public boolean isCaptured;
+    public boolean hasMoved;
+    public Square currentSquare;
 
 
-    public Piece(Color color, BoardPiece piece) {
+
+    public Piece(Color color) {
         this.color = color;
-        this.piece = piece;
+
     }
 
     public Color getColor() {
         return color;
     }
 
-    public BoardPiece getType() {
-        return piece;
+    public String getName() {
+        return name;
     }
 
-    public abstract boolean move(int startRow, int startCol, int endRow, int endCol);
+    public abstract boolean move(Square targetSquare);
 }

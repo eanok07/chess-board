@@ -5,11 +5,11 @@ import chess.*;
 public class Bishop extends Piece {
 
     public Bishop(Color color) {
-        super(color, BoardPiece.bishop);
+        super(color);
     }
 
     @Override
-    public boolean move(int startrow, int startcol, int endrow, int endcol) {
+    public boolean move(Square targetSquare) {
         return true;
     }
 }

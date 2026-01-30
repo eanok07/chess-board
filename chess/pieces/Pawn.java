@@ -2,14 +2,12 @@ package chess.pieces;
 import chess.*;
 
 public class Pawn extends Piece {
-
     public Pawn(Color color) {
-        super(color, BoardPiece.pawn);
+        super(color);
     }
 
     @Override
-    public boolean move(int startrow, int startcol, int endrow, int endcol) {
-
+    public boolean move(Square targetSquare) {
         return true;
     }
 }
