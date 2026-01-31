@@ -1,9 +1,10 @@
 package chess;
 
-public class ForwardMoveStrategy implements MoveStrategy {
+public interface ForwardMoveStrategy {
+ class ForwardMoveStrategyKing implements MoveStrategy {
     @Override
     public int maxSteps() {
-        return 8;
+        return 1;
     }
 
     @Override
@@ -17,5 +18,14 @@ public class ForwardMoveStrategy implements MoveStrategy {
         
         return possibilities;
     }
+
+    @Override
+    public boolean ValidMove(Square from, Square to) {
+        return false;
+    }
     
 }
+
+    
+}
+

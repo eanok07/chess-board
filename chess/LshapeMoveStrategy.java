@@ -1,9 +1,10 @@
 package chess;
 
-public class LshapeMoveStrategy implements MoveStrategy {
+public  interface LshapeMoveStrategy {
+     class LshapeMoveStrategyKnight  implements MoveStrategy {
     @Override
     public int maxSteps() {
-        return 1;
+        return 8;
     }
 
     @Override
@@ -19,4 +20,13 @@ public class LshapeMoveStrategy implements MoveStrategy {
       
         return possibilities;
     }
+
+    @Override
+    public boolean ValidMove(Square from, Square to) {
+       
+        return false;
+    }
+}
+
+    
 }

@@ -6,12 +6,13 @@ public abstract class Piece {
     public boolean isCaptured;
     public boolean hasMoved;
     public Square currentSquare;
+    protected MoveStrategy moveStrategy;
 
 
 
-    public Piece(Color color) {
+    public Piece(Color color, MoveStrategy moveStrategy) {
         this.color = color;
-
+        this.moveStrategy = moveStrategy;
     }
 
     public Color getColor() {
@@ -22,5 +23,12 @@ public abstract class Piece {
         return name;
     }
 
-    public abstract boolean move(Square targetSquare);
+    public boolean move(Square currentSquare, Square targetSquare) {
+        
+        return false;
+    }
+
+
 }
+
+

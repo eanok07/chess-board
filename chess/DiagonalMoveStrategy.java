@@ -1,9 +1,16 @@
 package chess;
 
-public class DiagonalMoveStrategy implements MoveStrategy {
+public interface DiagonalMoveStrategy {
+    class DiagonalMoveStrategyBishops implements MoveStrategy {
     @Override
     public int maxSteps() {
         return 8;
+    }
+    
+    @Override
+    public boolean ValidMove(Square from, Square to) {
+       
+        return false;
     }
 
     @Override
@@ -14,7 +21,6 @@ public class DiagonalMoveStrategy implements MoveStrategy {
         Square[] possibilities = new Square[32];
         int index = 0;
 
-        // Diagonal moves in four directions: up-left, up-right, down-left, down-right
         int[][] offsets = {{-1, -1}, {-1, 1}, {1, -1}, {1, 1}};
         
         
@@ -23,3 +29,7 @@ public class DiagonalMoveStrategy implements MoveStrategy {
     }
     
 }
+
+
+    
+} 

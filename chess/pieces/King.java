@@ -2,14 +2,24 @@ package chess.pieces;
 
 import chess.*;
 
-public class King extends Piece {
+public class King extends Piece implements ForwardMoveStrategy, DiagonalMoveStrategy {
 
-    public King(Color color) {
-        super(color);
+    public King(Color color, MoveStrategy moveStrategy) {
+        super(color, moveStrategy);
+    }
+     public String getName() {
+        return "King";
     }
 
-    @Override
-    public boolean move(Square targetSquare) {
-        return true;
+   private boolean validMove(Square fromSquare, Square targetSquare) {
+       int fromRow = fromSquare.getRow();
+       int fromCol = fromSquare.getCol();
+       
+     
+       return false;
     }
-}
+     @Override
+    public boolean move(Square currentSquare, Square targetSquare) {
+        return validMove(currentSquare, targetSquare);
+    }
+}   

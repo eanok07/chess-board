@@ -9,6 +9,9 @@ public class Board {
             for (int col = 0; col < 8; col++) {
                 squares[row][col] = new Square(row, col);
             }
-        }   
+            
+        }
+
+
     }
 }

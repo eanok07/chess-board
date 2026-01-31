@@ -1,20 +1,31 @@
 package chess;
 
-public class QueenMoveStrategy implements MoveStrategy {
-    private final ForwardMoveStrategy forwardMoveStrategy;
-    private final DiagonalMoveStrategy diagonalMoveStrategy;
+public interface QueenMoveStrategy {
 
-   
-
+     class QueenMoveStrategyall implements MoveStrategy {
     @Override
     public int maxSteps() {
-        return Math.max(forwardMoveStrategy.maxSteps(), diagonalMoveStrategy.maxSteps());
+        return 8;
     }
 
     @Override
     public Square[] possibilities(Square currentSquare) {
+        // Implementation for all moves
+        int row = currentSquare.getRow();
+        int col = currentSquare.getCol();
+        Square[] possibilities = new Square[64];
+        int index = 0;
+
         
-        return Possibilities;
+        return possibilities;
     }
+
+    @Override
+    public boolean ValidMove(Square from, Square to) {
+        return false;
+    }
+   
     
+}
+
 }
